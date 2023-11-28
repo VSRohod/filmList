@@ -3,6 +3,11 @@
         height: auto;
         padding:60px 0px;
     }
+
+    button{
+        height: 40px;
+    }
+
     main{
         flex-direction: column;
     }
@@ -11,6 +16,10 @@
     }
     #resposta {
         height: auto;
+    }
+
+    .filme{
+        width: 80%;
     }
 
     #templateFilme{

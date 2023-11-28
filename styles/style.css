@@ -9,6 +9,7 @@
 
 :root{
     --roxo : #7f03e4 ;
+    --verde : #00c54c ;
     --vermelho : #ff0044 ;
     --azul : #0337e4 ;
     --cinza: #c5c5c5;
@@ -153,4 +154,13 @@ button:active{
     background-color: transparent;
     color: var(--roxo);
     transition: 0.1s;
+}
+
+/* script */
+.success{
+    color: var(--verde);
+}
+
+.error{
+    color: var(--vermelho);
 }

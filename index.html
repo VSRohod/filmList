@@ -15,31 +15,32 @@
                 <h2>Cadastro de filme</h2>
                 <div class="formGroup">
                     <label for="nomeFilme">Nome do filme</label>
-                    <input type="text" id="nomeFilme" placeholder="nome">
+                    <input type="text" id="nomeFilme" placeholder="Nome">
                 </div>
                 <div class="formGroup">
                     <label for="descricaoFilme">Descrição do filme</label>
-                    <input type="text" id="descricaoFilme" placeholder="descricao">
+                    <input type="text" id="descricaoFilme" placeholder="Descrição">
                 </div>
                 <div class="formGroup">
                     <label for="dataFilme">Data do filme</label>
-                    <input type="date" id="dataFilme" placeholder="data">
+                    <input type="date" id="dataFilme" placeholder="Data">
                 </div>
                 <div class="formGroup">
                     <label for="diretorFilme">Diretor do filme</label>
-                    <input type="text" id="diretorFilme" placeholder="diretor">
+                    <input type="text" id="diretorFilme" placeholder="Diretor">
                 </div>
                 <div class="formGroup">
                     <label for="categoriaFilme">Categoria do filme</label>
-                    <input type="text" id="categoriaFilme" placeholder="categoria">
+                    <input type="text" id="categoriaFilme" placeholder="Categoria">
                 </div>
                 <div class="formGroup">
                     <button type="button" id="cadastroFilmesBtn">Cadastrar</button>
-                    <h4 id="erroCadastro"></h4>
+                    <span id="msgCadastro"></span>
                 </div>
                 <h4>Procurando por filmes? Veja a lista completa!</h4>
                 <h5>Filmes cadastrados: <span id="qtFilmes"></span></h5>
                 <button type="button" id="listarFilmesBtn">Listar</button>
+                <span id="msgResposta"></span>
             </form>
             <div id="resposta">
                 <div class="filme" id="templateFilme">
