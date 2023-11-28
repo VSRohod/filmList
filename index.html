@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmes</title>
+    <link rel="shortcut icon" href="images/icons/camera-reels-fill.svg" type="image/x-icon">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/@media.css">
+</head>
+<body>
+    <div id="page">
+        <main>
+            <form>
+                <h2>Cadastro de filme</h2>
+                <div class="formGroup">
+                    <label for="nomeFilme">Nome do filme</label>
+                    <input type="text" id="nomeFilme" placeholder="nome">
+                </div>
+                <div class="formGroup">
+                    <label for="descricaoFilme">Descrição do filme</label>
+                    <input type="text" id="descricaoFilme" placeholder="descricao">
+                </div>
+                <div class="formGroup">
+                    <label for="dataFilme">Data do filme</label>
+                    <input type="date" id="dataFilme" placeholder="data">
+                </div>
+                <div class="formGroup">
+                    <label for="diretorFilme">Diretor do filme</label>
+                    <input type="text" id="diretorFilme" placeholder="diretor">
+                </div>
+                <div class="formGroup">
+                    <label for="categoriaFilme">Categoria do filme</label>
+                    <input type="text" id="categoriaFilme" placeholder="categoria">
+                </div>
+                <div class="formGroup">
+                    <button type="button" id="cadastroFilmesBtn">Cadastrar</button>
+                    <h4 id="erroCadastro"></h4>
+                </div>
+                <h4>Procurando por filmes? Veja a lista completa!</h4>
+                <h5>Filmes cadastrados: <span id="qtFilmes"></span></h5>
+                <button type="button" id="listarFilmesBtn">Listar</button>
+            </form>
+            <div id="resposta">
+                <div class="filme" id="templateFilme">
+                    <h2>Veja a lista dos melhores filmes!</h2>
+                    <div id="filmeBannerTemplate">
+                        <img src="images/banner.png" alt="" class="images">
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>

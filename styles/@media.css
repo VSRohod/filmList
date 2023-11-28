@@ -1,0 +1,19 @@
+@media screen and (max-width: 1250px){
+    #page{
+        height: auto;
+        padding:60px 0px;
+    }
+    main{
+        flex-direction: column;
+    }
+    form, #resposta{
+        width: 100%;
+    }
+    #resposta {
+        height: auto;
+    }
+
+    #templateFilme{
+        display: none;
+    }
+}
