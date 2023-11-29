@@ -1,20 +1,12 @@
-class Filmes {
-    constructor(nome,descricao,data,diretor,categoria){
-        this.nome = nome;
-        this.descricao = descricao;
-        this.data = data;
-        this.diretor = diretor;
-        this.categoria = categoria;
-    }
-}
-
-var cadastrarFilmesBtn = document.querySelector("#cadastroFilmesBtn");
-var listarFilmesBtn = document.querySelector("#listarFilmesBtn");
-var qtFilmesSpan = document.querySelector("#qtFilmes");
+const cadastrarFilmesBtn = document.querySelector("#cadastroFilmesBtn");
+const listarFilmesBtn = document.querySelector("#listarFilmesBtn");
+const hideFilmesBtn = document.querySelector("#hideFilmesBtn");
+const qtFilmesSpan = document.querySelector("#qtFilmes");
 var filmes = [];
 
 cadastrarFilmesBtn.addEventListener("click",cadastrar);
 listarFilmesBtn.addEventListener("click",listar);
+hideFilmesBtn.addEventListener("click",hideShow);
 
 function cadastrar(){
     let nomeFilme = document.querySelector("#nomeFilme").value;
@@ -27,15 +19,12 @@ function cadastrar(){
 
     msgResposta.innerHTML = "";
 
-    let i = 0;
-    let filmesCadastrados = filmes.length;
-    while(i <= filmesCadastrados) {
-        if(filmes[i].nome == nomeFilme){
-            var verificaFilme = true;
+    var verificaFilme = false;
+    var mapFilmes = filmes.map((x) => x.nome);
+    for(let i = 0 ; i<= filmes.length;i++) {
+        if( mapFilmes[i] == nomeFilme){
+            verificaFilme = true;
             break;
-        }else{
-            var verificaFilme = false;
-            i++;
         }
     }
 
@@ -72,7 +61,13 @@ function listar(){
     }
 }
 
+function hideShow(){
+    let resposta = document.querySelector("#resposta");
+
+    resposta.innerHTML = "";
+}
+
+// for tests
 filmes.push(new Filmes("O exterminador do futuro","Disfarçado de humano, o assassino conhecido como o Exterminador viaja de 2029 a 1984 para matar Sarah Connor. Enviado para proteger Sarah está Kyle Reese, que divulga a chegada do Skynet, um sistema de inteligência artificial que detonará um holocausto nuclear. Sarah é o alvo porque a Skynet sabe que seu futuro filho comandará a luta contra eles. Com o implacável Exterminador os perseguindo, Sarah e Kyle tentam sobreviver.","25/03/1985","James Cameron","Ação/Ficção científica"));
-filmes.push(new Filmes("Matrix","Disfarçado de humano, o assassino conhecido como o Exterminador viaja de 2029 a 1984 para matar Sarah Connor. Enviado para proteger Sarah está Kyle Reese, que divulga a chegada do Skynet, um sistema de inteligência artificial que detonará um holocausto nuclear. Sarah é o alvo porque a Skynet sabe que seu futuro filho comandará a luta contra eles. Com o implacável Exterminador os perseguindo, Sarah e Kyle tentam sobreviver.","25/03/1985","James Cameron","Ação/Ficção científica"));
 
 qtFilmesSpan.innerHTML = filmes.length;

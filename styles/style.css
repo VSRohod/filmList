@@ -28,6 +28,10 @@ h1,h2,h3,h4,h5,h6{
     margin: 10px 0px;
 }
 
+.m{
+    margin: 10px 0px;
+}
+
 input{
     width: 200px;
     height: 20px;
@@ -46,6 +50,11 @@ button{
     border: none;
     color: var(--branco);
     transition: 0.5s;
+}
+
+.btnDanger{
+    background-color: var(--vermelho);
+    color: var(--branco);
 }
 
 #page{
@@ -154,6 +163,10 @@ button:active{
     background-color: transparent;
     color: var(--roxo);
     transition: 0.1s;
+}
+
+.btnDanger:active{
+    color: var(--vermelho);
 }
 
 /* script */
